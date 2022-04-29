@@ -13,9 +13,8 @@ fi
 # ensure the destination exists
 mkdir -p "$DEST_DIR"
 
-cp -r dist/ "$DEST_DIR"/layan-cursors-nohands
-cp -r dist-border/ "$DEST_DIR"/layan-border-cursors-nohands
-cp -r dist-white/ "$DEST_DIR"/layan-white-cursors-nohands
+#rsync -a --delete dist/ "$DEST_DIR"/layan-cursors-nohands
+rsync -a --delete dist-border/ "$DEST_DIR"/layan-border-cursors-nohands
+#rsync -a --delete dist-white/ "$DEST_DIR"/layan-white-cursors-nohands
 
 echo "Finished..."
-
